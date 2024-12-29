@@ -893,7 +893,7 @@ static SVCXPRT *create_tcp_transport(unsigned int port)
     SVCXPRT *transp = NULL;
     int sock;
 
-    sock = socket(PF_INET6, SOCK_STREAM, 0);
+    sock = socket(PF_INET, SOCK_STREAM, 0);
 
     if ((sock == -1) && (errno == EAFNOSUPPORT))
 	sock = socket(PF_INET, SOCK_STREAM, 0);
